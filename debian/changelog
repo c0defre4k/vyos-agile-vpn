@@ -1,3 +1,9 @@
+vyos-vpn-agile (0.2.8) unstable; urgency=low
+
+  * add support for strongswan leftupdown script
+
+ -- Ralph Pillichshammer <c0defre4k@users.noreply.github.com>  Tue, 24 Jul 2018 08:11:01 +0000
+
 vyos-vpn-agile (0.2.7) unstable; urgency=low
 
   * Fix the bug where IPv6 subnets generate the wrong leftsubnet= output

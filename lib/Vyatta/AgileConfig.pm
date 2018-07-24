@@ -33,6 +33,7 @@ my %fields = (
   _auth_mode        => undef,
   _oper_mode        => undef,
   _mtu              => undef,
+  _left_updown      => undef,
   _ike_lifetime     => undef,
   _inactivity       => undef,
   _ike_group        => undef,
@@ -474,6 +475,7 @@ sub get_ra_conn {
   if (defined($self->{_x509_l_id})) {
      $server_id = "  leftid=" . $self->{_x509_l_id}. "\n";
   }
+  my $leftupdown;
   if (defined($self->{_left_updown})) {
      $leftupdown = "  leftupdown=" . $self->{_left_updown}. "\n";
   }
