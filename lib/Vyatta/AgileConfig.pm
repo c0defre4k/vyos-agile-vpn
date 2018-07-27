@@ -475,8 +475,10 @@ sub get_ra_conn {
   if (defined($self->{_x509_l_id})) {
      $server_id = "  leftid=" . $self->{_x509_l_id}. "\n";
   }
+  my $leftfirewall = "leftfirewall=yes";
   my $leftupdown;
   if (defined($self->{_left_updown})) {
+     $leftfirewall = "";
      $leftupdown = "  leftupdown=" . $self->{_left_updown}. "\n";
   }
   if (defined($self->{_x509_r_id})) {
@@ -511,7 +513,7 @@ ${auth_str}
   left=$oaddr
 ${server_id}
   leftsubnet=${left_subnet_route}
-  leftfirewall=yes
+${leftfirewall}  
   lefthostaccess=yes
 ${leftupdown}
   ike=${ike_str}${compat}
